@@ -18,15 +18,6 @@ RUN pip install robotframework-selenium2library
 RUN pip install requests
 RUN pip install robotframework-requests
 
-#========================================
-# Add normal user with passwordless sudo
-#========================================
-RUN sudo useradd robot --shell /bin/bash --create-home \
-  && sudo usermod -a -G sudo seluser \
-  && echo 'ALL ALL = (ALL) NOPASSWD: ALL' >> /etc/sudoers \
-  && echo 'robot:123456' | chpasswd
-
-
 RUN mkdir /robot
 VOLUME /robot
 WORKDIR /robot
