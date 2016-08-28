@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:14.04
 
 MAINTAINER john.wang <wywincl@126.com>
 
@@ -22,6 +22,6 @@ RUN mkdir /robot
 VOLUME /robot
 WORKDIR /robot
 
-ADD entry-point.sh /opt/bin/entry-point.sh
+ADD entry-point.sh /entry-point.sh
 
-ENTRYPOINT ["/opt/bin/entry-point.sh"]
+ENTRYPOINT ["/entry-point.sh"]
