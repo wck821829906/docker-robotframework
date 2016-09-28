@@ -6,5 +6,5 @@ run robotframework with selenium2library, requestslibrary from docker.
 # How to use this images
 
 ```
-docker run -it --rm -v /some/robot-content:/robot wywincl/docker-robotframework
+docker run -it --rm -v /path/robot-content:/etc/robot wywincl/docker-robotframework [options] data_sources
 ```
