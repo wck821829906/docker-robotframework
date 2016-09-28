@@ -18,10 +18,12 @@ RUN pip install robotframework-selenium2library
 RUN pip install requests
 RUN pip install robotframework-requests
 
-RUN mkdir /robot
-VOLUME /robot
-WORKDIR /robot
+RUN mkdir /etc/robot
+VOLUME /etc/robot
+WORKDIR /etc/robot
 
-ADD entry-point.sh /entry-point.sh
+#ADD entry-point.sh /entry-point.sh
 
-ENTRYPOINT ["/entry-point.sh"]
+#ENTRYPOINT ["/entry-point.sh"]
+ENTRYPOINT ["robot"]
+
